@@ -1,0 +1,43 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 24px;
+    font-weight: normal;
+    text-shadow: none;
+    min-height: 0;
+}
+
+#waybar {
+    min-height: 56px;           /* 稍微增加高度，容纳更大的间距 */
+    padding: 0 4px;            /* 状态栏左右增加内边距 */
+    margin: 0 4px;
+}
+
+/* 针对所有主要功能模块，增加间距 */
+#network, #battery, #pulseaudio,
+#bluetooth, #backlight, #temperature,
+#custom-* {
+    padding: 0 20px;            /* 从 14px 增加到 20px，加大模块之间的水平距离 */
+    margin: 0 10px;             /* 从 6px 增加到 10px，进一步拉大模块间距 */
+    min-height: 44px;
+}
+
+/* 控制每个模块内部的图标，增加图标右侧的间距 */
+#network icon, #battery icon, #pulseaudio icon,
+#bluetooth icon, #backlight icon, #temperature icon,
+#custom-* icon {
+    font-size: 22px;
+    padding-right: 12px;        /* 从 10px 增加到 16px，让图标和文字之间更宽松 */
+    margin-right: 6px;
+}
+
+/* 控制模块内的文字标签 */
+#network label, #battery label, #pulseaudio label,
+#bluetooth label, #backlight label, #temperature label,
+#custom-* label {
+    margin-left: 6px;
+}
+
+/* 针对某些特殊模块，你可能想单独调整 */
+#battery {
+    padding: 0 24px;            /* 电池模块可以单独更大一些 */
+}
